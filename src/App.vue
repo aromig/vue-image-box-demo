@@ -36,18 +36,18 @@ export default {
     return {
       index: null,
       images: [
-        "https://placekitten.com/800/800",
-        "https://placekitten.com/825/800",
-        "https://placekitten.com/803/800",
-        "https://placekitten.com/804/800",
-        "https://placekitten.com/805/800",
-        "https://placekitten.com/806/800",
-        "https://placekitten.com/807/800",
-        "https://placekitten.com/808/800",
-        "https://placekitten.com/832/800",
-        "https://placekitten.com/811/800",
-        "https://placekitten.com/873/800",
-        "https://placekitten.com/895/800"
+        "https://placekitten.com/800/600",
+        "https://placekitten.com/825/600",
+        "https://placekitten.com/803/600",
+        "https://placekitten.com/833/600",
+        "https://placekitten.com/831/600",
+        "https://placekitten.com/806/600",
+        "https://placekitten.com/855/600",
+        "https://placekitten.com/847/600",
+        "https://placekitten.com/832/600",
+        "https://placekitten.com/883/600",
+        "https://placekitten.com/873/600",
+        "https://placekitten.com/895/600"
       ]
     };
   }
