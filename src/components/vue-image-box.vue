@@ -180,4 +180,19 @@ $modal__bg: rgba($black, 0.9);
 .image-fade-enter-active {
   transition: all 0.5s ease;
 }
+
+@media (max-width: 500px) {
+  .imgBox {
+    &__close {
+      top: 90vh;
+      right: calc(50% - 36px);
+      font-size: 36px;
+    }
+    &__previous,
+    &__next {
+      top: 80%;
+      font-size: 64px;
+    }
+  }
+}
 </style>
