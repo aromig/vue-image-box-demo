@@ -120,11 +120,11 @@ $modal__bg: rgba($black, 0.9);
     position: absolute;
     overflow: hidden;
     cursor: pointer;
-    max-width: 100vh;
-    margin: 1.5rem auto;
+    max-width: 100vw;
+    height: 100vh;
+    margin: auto;
     left: 0.5rem;
     right: 0.5rem;
-    height: 90vh;
   }
   & img {
     width: 100%;

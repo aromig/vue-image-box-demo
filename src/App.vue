@@ -90,9 +90,13 @@ export default {
 
 @media (max-width: 500px) {
   .gallery {
-    grid-template-columns: repeat(1, 0.75fr);
-    grid-template-rows: repeat(1, minmax(0.75fr, 75%));
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__image {
+      width: 90%;
+      height: 90%;
+    }
   }
 }
 </style>
