@@ -4,6 +4,8 @@ Lightweight and simple-ish image gallery component for Vue.js.
 
 Images can be cycled throgh using the left & right arrow keys, and closed with the escape key.
 
+Demo: [vue-image-box.netlify.com](https://vue-image-box.netlify.com)
+
 ## Using this Component
 
 1. Save the `vue-image-box.vue` file into your project's "components" folder (e.g. `src/components/`).
