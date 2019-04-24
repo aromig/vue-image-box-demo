@@ -178,6 +178,6 @@ $modal__bg: rgba($black, 0.9);
 }
 
 .image-fade-enter-active {
-  transition: all 1s ease;
+  transition: all 0.5s ease;
 }
 </style>

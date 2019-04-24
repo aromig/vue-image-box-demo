@@ -96,6 +96,7 @@ export default {
     &__image {
       width: 90%;
       height: 90%;
+      margin: 5px 0;
     }
   }
 }
