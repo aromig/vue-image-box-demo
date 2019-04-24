@@ -184,13 +184,13 @@ $modal__bg: rgba($black, 0.9);
 @media (max-width: 500px) {
   .imgBox {
     &__close {
-      top: 90vh;
+      top: 85vh;
       right: calc(50% - 36px);
       font-size: 36px;
     }
     &__previous,
     &__next {
-      top: 80%;
+      top: 80vh;
       font-size: 64px;
     }
   }
