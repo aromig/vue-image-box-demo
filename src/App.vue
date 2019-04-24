@@ -74,7 +74,7 @@ export default {
   grid-gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-auto-rows: auto;
-  grid-auto-flow: row dense;
+  grid-auto-flow: row;
   &__image {
     width: 100%;
     height: 100%;
@@ -85,6 +85,14 @@ export default {
     &:hover {
       transform: scale(1.05);
     }
+  }
+}
+
+@media (max-width: 500px) {
+  .gallery {
+    grid-template-columns: repeat(1, 0.75fr);
+    grid-template-rows: repeat(1, minmax(0.75fr, 75%));
+    justify-content: center;
   }
 }
 </style>
