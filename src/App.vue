@@ -13,6 +13,7 @@
         :images="images"
         :index="index"
         @close="index = null"
+        :bgcolor="bgcolor"
       ></ImageBox>
     </div>
     <img src="@/assets/logo.png" alt="Vue Logo" class="vue-logo" />
@@ -48,7 +49,8 @@ export default {
         "https://placekitten.com/883/600",
         "https://placekitten.com/873/600",
         "https://placekitten.com/895/600"
-      ]
+      ],
+      bgcolor: "rgba(51,102,153, .9)"
     };
   }
 };
