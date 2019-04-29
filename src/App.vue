@@ -5,9 +5,11 @@
       <img
         v-for="(image, idx) in images"
         :key="idx"
-        :src="image"
+        :src="image.thumbUrl"
         @click="onClick(idx)"
         class="gallery__image"
+        :alt="image.caption"
+        :title="image.caption"
       />
       <ImageBox
         :images="images"
@@ -37,20 +39,68 @@ export default {
     return {
       index: null,
       images: [
-        "https://placekitten.com/800/600",
-        "https://placekitten.com/825/600",
-        "https://placekitten.com/803/600",
-        "https://placekitten.com/833/600",
-        "https://placekitten.com/831/600",
-        "https://placekitten.com/806/600",
-        "https://placekitten.com/855/600",
-        "https://placekitten.com/847/600",
-        "https://placekitten.com/832/600",
-        "https://placekitten.com/883/600",
-        "https://placekitten.com/873/600",
-        "https://placekitten.com/895/600"
+        {
+          imageUrl: "https://placekitten.com/800/600",
+          thumbUrl: "https://placekitten.com/800/600",
+          caption: "kitten"
+        },
+        {
+          imageUrl: "https://placekitten.com/825/600",
+          thumbUrl: "https://placekitten.com/825/600",
+          caption: "kitten"
+        },
+        {
+          imageUrl: "https://placekitten.com/803/600",
+          thumbUrl: "https://placekitten.com/803/600",
+          caption: "kitten"
+        },
+        {
+          imageUrl: "https://placekitten.com/833/600",
+          thumbUrl: "https://placekitten.com/833/600",
+          caption: "kitten"
+        },
+        {
+          imageUrl: "https://placekitten.com/831/600",
+          thumbUrl: "https://placekitten.com/831/600",
+          caption: "kitten"
+        },
+        {
+          imageUrl: "https://placekitten.com/806/600",
+          thumbUrl: "https://placekitten.com/806/600",
+          caption: "kitten"
+        },
+        {
+          imageUrl: "https://placekitten.com/855/600",
+          thumbUrl: "https://placekitten.com/855/600",
+          caption: "kitten"
+        },
+        {
+          imageUrl: "https://placekitten.com/847/600",
+          thumbUrl: "https://placekitten.com/847/600",
+          caption: "kitten"
+        },
+        {
+          imageUrl: "https://placekitten.com/832/600",
+          thumbUrl: "https://placekitten.com/832/600",
+          caption: "kitten"
+        },
+        {
+          imageUrl: "https://placekitten.com/883/600",
+          thumbUrl: "https://placekitten.com/883/600",
+          caption: "kitten"
+        },
+        {
+          imageUrl: "https://placekitten.com/873/600",
+          thumbUrl: "https://placekitten.com/873/600",
+          caption: "kitten"
+        },
+        {
+          imageUrl: "https://placekitten.com/895/600",
+          thumbUrl: "https://placekitten.com/895/600",
+          caption: "kitten"
+        }
       ],
-      bgcolor: "rgba(51,102,153, .9)"
+      bgcolor: "rgba(51, 51, 51, .9)"
     };
   }
 };
