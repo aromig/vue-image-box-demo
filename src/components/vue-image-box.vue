@@ -120,9 +120,6 @@ $modal__bg: rgba($black, 0.9);
   transition: opacity 0.2s ease;
   position: fixed;
   z-index: 1000;
-}
-@mixin modal__mask() {
-  @include modal__base();
   top: 0;
   left: 0;
   width: 100%;
@@ -139,7 +136,7 @@ $modal__bg: rgba($black, 0.9);
 
 // Modal Container & Image
 .imgBox {
-  @include modal__mask();
+  @include modal__base();
   &__container {
     position: absolute;
     overflow: hidden;
