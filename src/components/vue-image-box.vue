@@ -50,8 +50,7 @@ export default {
   props: ["images", "index", "bgcolor"],
   data() {
     return {
-      imageIndex: this.index,
-      image: null
+      imageIndex: this.index
     };
   },
   mounted() {
@@ -69,6 +68,27 @@ export default {
         this.close();
       }
     });
+
+    window.addEventListener("click", e => {
+      if (this.imageIndex === 0) {
+        this.preLoad(
+          this.images[this.images.length - 1].imageUrl,
+          this.images[this.imageIndex + 1].imageUrl
+        );
+      } else if (this.imageIndex === this.images.length - 1) {
+        this.preLoad(
+          this.images[this.imageIndex - 1].imageUrl,
+          this.images[0].imageUrl
+        );
+      } else {
+        this.preLoad(
+          this.images[this.imageIndex - 1].imageUrl,
+          this.images[this.imageIndex + 1].imageUrl
+        );
+      }
+    });
+
+    this.preLoad(this.images[0].imageUrl);
   },
   watch: {
     index(value) {
@@ -82,21 +102,46 @@ export default {
     },
     previousImage: function() {
       if (this.imageIndex === null) return;
+
       this.imageIndex =
         this.imageIndex > 0 ? this.imageIndex - 1 : this.images.length - 1;
+
+      if (this.imageIndex > 0) {
+        this.preLoad(this.images[this.imageIndex - 1].imageUrl);
+      } else {
+        this.preLoad(this.images[this.images.length - 1].imageUrl);
+      }
     },
     nextImage: function() {
       if (this.imageIndex === null) return;
+
       this.imageIndex =
         this.imageIndex < this.images.length - 1 ? this.imageIndex + 1 : 0;
+
+      if (this.imageIndex < this.images.length - 1) {
+        this.preLoad(this.images[this.imageIndex + 1].imageUrl);
+      } else {
+        this.preLoad(this.images[0].imageUrl);
+      }
+    },
+    preLoad: function(...urls) {
+      let preloaded = [];
+      for (let idx = 0; idx < urls.length; idx++) {
+        preloaded[idx] = new Image();
+        preloaded[idx].src = urls[idx];
+      }
     }
   },
   computed: {
     imageUrl() {
-      return this.images[this.imageIndex].imageUrl;
+      return this.imageIndex !== null
+        ? this.images[this.imageIndex].imageUrl
+        : "";
     },
     imageCaption() {
-      return this.images[this.imageIndex].caption;
+      return this.imageIndex !== null
+        ? this.images[this.imageIndex].caption
+        : "";
     },
     hasMultipleImages() {
       return this.images.length > 1;
